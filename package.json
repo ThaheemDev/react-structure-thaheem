@@ -1,16 +1,23 @@
 {
-  "name": "react-structure-ragzon",
-  "version": "1.0.3",
-  "description": "this is just a simple structure",
+  "name": "react-structure-thaheem",
+  "version": "0.0.1",
+  "description": "A lightweight and flexible project structure for React applications, designed to streamline development and maintainability. Organize your React codebase efficiently with this easy-to-use template.",
   "main": "index.js",
   "bin": {
-    "react-structure-ragzon": "./index.js"
+    "react-structure-thaheem": "index.js"
   },
   "scripts": {
     "generate": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Arslan Thaheem",
   "license": "ISC",
-  "dependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thaheem001/react-structure-thaheem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Thaheem001/react-structure-thaheem/issues"
+  },
+  "homepage": "https://github.com/Thaheem001/react-structure-thaheem#readme"
 }
