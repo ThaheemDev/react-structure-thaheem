@@ -1,0 +1,16 @@
+{
+  "name": "react-structure-ragzon",
+  "version": "1.0.3",
+  "description": "this is just a simple structure",
+  "main": "index.js",
+  "bin": {
+    "react-structure-ragzon": "./index.js"
+  },
+  "scripts": {
+    "generate": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

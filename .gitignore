@@ -123,6 +123,9 @@ dist
 .vscode-test
 
 # yarn v2
+
+#mac random file
+.DS_Store
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
