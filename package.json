@@ -2,16 +2,17 @@
   "name": "react-structure-thaheem",
   "version": "0.0.1",
   "description": "A lightweight and flexible project structure for React applications, designed to streamline development and maintainability. Organize your React codebase efficiently with this easy-to-use template.",
-  "main": "index.js",
+  "main": "./src/main.js",
   "bin": {
-    "react-structure-thaheem": "index.js"
+    "structure-thaheem": "./src/main.js"
   },
   "scripts": {
-    "generate": "node index.js"
+    "generate": "node ./src/main.js"
   },
   "keywords": [],
   "author": "Arslan Thaheem",
   "license": "ISC",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Thaheem001/react-structure-thaheem.git"
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Thaheem001/react-structure-thaheem/issues"
   },
-  "homepage": "https://github.com/Thaheem001/react-structure-thaheem#readme"
+  "homepage": "https://github.com/Thaheem001/react-structure-thaheem#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.11"
+  }
 }

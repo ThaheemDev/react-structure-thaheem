@@ -1,23 +1,19 @@
-#!/usr/bin/env node
-
+import chalk from 'chalk';
 import fs from 'fs';
 import path from 'path';
 
-export const generateFileStructure = () => {
-    // Get the folder name from the command line arguments
-    const args = process.argv.slice(2);
-    let folderName = args[0];
+export const generateFileStructure = (projectName = false) => {
+    const rootDir = projectName ? path.join(process.cwd(), projectName) : process.cwd();
 
-    if (args.length !== 1 || folderName === '--help' || folderName === '-h') {
-        console.log('Usage: react-structure <folder-name>');
-        process.exit(1);
-    }
-
-    const rootDir = path.join(process.cwd(), folderName);
-
-    if (!fs.existsSync(rootDir)) {
+    // check  if same directory exists
+    if (projectName && fs.existsSync(rootDir)) {
+        console.log(chalk.red('Same directory already exists'))
+        return false;
+    } else if (projectName) {
         fs.mkdirSync(rootDir);
     }
+
+
 
     // Create directories
     const directoriesToCreate = [
@@ -46,7 +42,6 @@ export const generateFileStructure = () => {
         }
     });
 
-    console.log(`File structure for '${folderName}' generated successfully.`);
+    console.log(chalk.green('File structure generated successfully.'));
 };
 
-// generateFileStructure();
