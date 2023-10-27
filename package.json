@@ -1,6 +1,6 @@
 {
   "name": "react-structure-thaheem",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A lightweight and flexible project structure for React applications, designed to streamline development and maintainability. Organize your React codebase efficiently with this easy-to-use template.",
   "main": "./src/main.js",
   "bin": {
