@@ -3,6 +3,7 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk'
 import { generateFileStructure } from './react.js';
+import figlet from 'figlet';
 
 
 const projectList = ["React", "Next.js", "Nest", "Node", "Express.js"]
@@ -37,6 +38,7 @@ async function createStructure() {
 
     try {
 
+
         const { projectOption, isNew, projectName } = await inquirer.prompt(projectOptions);
         console.log(isNew, projectName)
         if (projectOption !== projectList[0]) {
@@ -52,4 +54,12 @@ async function createStructure() {
     }
 }
 
-createStructure()
+figlet('Thaheem Str.', function (err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    }
+    console.log(data);
+    createStructure()
+});

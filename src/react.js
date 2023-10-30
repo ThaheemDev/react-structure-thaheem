@@ -1,6 +1,7 @@
 import chalk from 'chalk';
 import fs from 'fs';
 import path from 'path';
+import { exec } from 'child_process'
 
 export const generateFileStructure = (projectName = false) => {
     const rootDir = projectName ? path.join(process.cwd(), projectName) : process.cwd();
@@ -40,6 +41,19 @@ export const generateFileStructure = (projectName = false) => {
         if (!fs.existsSync(file.path)) {
             fs.writeFileSync(file.path, file.content);
         }
+    });
+    const commandToRun = 'cd src && ls'; // On Windows, you can use 'dir'
+
+    exec(commandToRun, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`Command execution error: ${stderr}`);
+            return;
+        }
+        console.log(`Command output: ${stdout}`);
     });
 
     console.log(chalk.green('File structure generated successfully.'));
