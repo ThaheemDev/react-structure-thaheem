@@ -17,12 +17,13 @@ export const allCommands = [
     { cmd: "npm install --save react-hot-toast", message: "react-hot-toast for sweet and awesome alert" },
     { cmd: "npm install --save sass", message: "sass for styling" },
     { cmd: "npm install --save typescript", message: "latest typescript" },
+    { cmd: "npm install --save axios", message: "axios for fetching api" },
 ]
 
 console.log('--------------------------------------------')
 console.log(chalk.blue('Creating folder structure!'))
 console.log('--------------------------------------------')
-console.log(chalk.blue('NOTE: We create a src directory if not already exist then create a copy of src directory'))
+console.log(chalk.blue('NOTE: We create a src directory if already exist then create a copy of src directory'))
 
 // console.log(chalk.red('NOTE: We are adding a JSLINT file in to the root of your current terminal location!'))
 /**
@@ -36,7 +37,7 @@ chalk.green(shell.exec(`npm install ${myApp.name}`))
 console.log(chalk.red('1/') + chalk.red('2') + chalk.green('Files installed successfully and copying into ' + isExistSrc ? ' src-copy' : 'src'))
 
 shell.exec(`cp -R ./node_modules/${myApp.name}/str/${isTs ? "next-ts" : "next-js"}/src/* ${isExistSrc ? './src-copy' : './src'}`)
-console.log(chalk.red('2/') + chalk.red('2') + chalk.green(' : folder structure Created successfully'))
+console.log(chalk.red('2/') + chalk.red('2') + chalk.green('folder structure Created successfully'))
 
 // shell.exec(`cp ./node_modules/${myApp.name}/.eslintrc.js ./`)
 // console.log(chalk.red('3/') + chalk.red('3') + chalk.green(' : Eslint file added to root'))

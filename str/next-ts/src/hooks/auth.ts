@@ -3,10 +3,10 @@ import { useAppDispatch, useAppSelector } from '@/hooks/store';
 import { verifyUser } from '@/store/actions/verify-user';
 import { deleteCookie, setCookie } from '@/utils/cookies';
 import { fetchRequest } from '@/utils/axios/fetch';
-import { userType } from '@/types';
-import { API_ENDPOINTS } from '@/config/Api_EndPoints';
-import { ROUTES } from '@/config/constant';
+import { userType } from '@/types'; 
 import { useRouter } from 'next/router';
+import { API_ENDPOINTS } from '@/constant/Api_EndPoints';
+import { ROUTES } from '@/constant/Route_Endpoints';
 
 type logInUserType = {
     access: string;

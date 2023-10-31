@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import Header from "../components/Layout/Header";
-import Footer from "../components/Layout/Footer";
-import { useUserAuth } from "../hooks/auth";
-import { getCookie } from "../utils/cookies";
-import { ROUTES } from "../constant/Route_Endpoints";
-import ModalWraper from "../Modal";
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
+import { useUserAuth } from "@/hooks/auth";
+import { getCookie } from "@/utils/cookies";
+import { ROUTES } from "@/constant/Route_Endpoints";
+import ModalWraper from "@/Modal";
 import { Toaster } from 'react-hot-toast';
 import NextNProgress from 'nextjs-progressbar';
 

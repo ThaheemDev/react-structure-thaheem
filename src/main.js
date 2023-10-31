@@ -62,7 +62,7 @@ async function runStatFunction() {
             console.log(chalk.red('Sorry we are working on javascript file structure.. please stay with us'));
             process.exit(1);
         }
-        shell.exec('yarn next-str  --ts')
+        shell.exec('next-str  --ts')
 
 
     } catch (error) {

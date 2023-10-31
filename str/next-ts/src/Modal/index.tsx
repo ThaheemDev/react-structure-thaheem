@@ -1,7 +1,7 @@
 import React from "react";
-import Modal from "../components/Modal";
-import { useUi } from "../hooks/user-interface";
-import { modalType } from "../store/slices/ui.slice";
+import Modal from "@/components/Modal";
+import { useUi } from "@/hooks/user-interface";
+import { modalType } from "@/store/slices/ui.slice";
 import TestModal from "./test.modal";
 
 const ModalWraper = () => {
